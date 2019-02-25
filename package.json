@@ -1,0 +1,25 @@
+{
+  "name": "puppeteer-jest-demo",
+  "version": "1.0.0",
+  "description": "Puppeteer jest demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "jobs": "jest -t 'Google jobs search'",
+    "example": "jest -t 'matching this test'"
+  },
+  "dependencies": {
+    "json2csv": "^4.3.5",
+    "puppeteer": "^1.12.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.12.1",
+    "jest": "^24.0.0",
+    "jest-puppeteer": "^4.0.0"
+  },
+  "repository": "git@github.com:samarpanda/puppeteer-jest-demo.git",
+  "author": "Samar Panda <er.samarpanda@gmail.com>",
+  "license": "MIT"
+}
