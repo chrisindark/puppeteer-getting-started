@@ -1,4 +1,3 @@
-// import puppeteer from 'puppeteer';
 const puppeteer = require('puppeteer');
 const width = 1024;
 const height = 800;
@@ -31,7 +30,7 @@ exports.stop = async (browser) => {
   browser.close();
 };
 
-exports.getSearchInput = async (page) => {
+const getSearchInput = async (page) => {
   const qSelector = 'input.gLFyf.gsfi';
   const searchInput = await page.$(qSelector);
   return searchInput;
