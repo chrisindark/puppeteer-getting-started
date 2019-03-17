@@ -6,11 +6,14 @@
   "scripts": {
     "test": "jest",
     "jobs": "jest -t 'Google jobs search'",
-    "example": "jest -t 'matching this test'"
+    "example": "jest -t 'matching this test'",
+    "start": "node index.js",
+    "emulate": "node index.js --device='Nexus 5'"
   },
   "dependencies": {
     "json2csv": "^4.3.5",
-    "puppeteer": "^1.12.2"
+    "puppeteer": "^1.12.2",
+    "yargs": "^13.2.2"
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
