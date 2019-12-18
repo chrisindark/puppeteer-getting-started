@@ -1,28 +1,43 @@
 {
-  "name": "puppeteer-jest-demo",
+  "name": "puppeteer-getting-started",
   "version": "1.0.0",
-  "description": "Puppeteer jest demo",
+  "description": "Puppeteer getting started",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "jobs": "jest -t 'Google jobs search'",
     "example": "jest -t 'matching this test'",
     "start": "node index.js",
-    "emulate": "node index.js --device='Nexus 5'"
+    "emulate": "node index.js --device='Nexus 5'",
+    "buildJsonFromCsv": "npx babel ./src/others/csvToJson.js --out-file ./src/others/csvToJsonNode.js --presets=@babel/preset-env,@babel/preset-react",
+    "getJsonFromCsv": "npm run buildJsonFromCsv && node ./src/others/csvToJsonNode.js"
+
   },
   "dependencies": {
+    "csvtojson": "^2.0.10",
     "json2csv": "^4.3.5",
     "puppeteer": "^1.12.2",
     "yargs": "^13.2.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.3",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.12.1",
     "jest": "^24.0.0",
     "jest-puppeteer": "^4.0.0"
   },
-  "repository": "git@github.com:samarpanda/puppeteer-jest-demo.git",
-  "author": "Samar Panda <er.samarpanda@gmail.com>",
+  "repository": "",
+  "author": "",
   "license": "MIT"
 }

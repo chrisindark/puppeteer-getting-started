@@ -5,12 +5,20 @@ const devices = require('puppeteer/DeviceDescriptors');
 const defaultDevice = devices['Nexus 5X'];
 const width = 800;
 const height = 600;
+const args = [];
+args.push(`--window-size=${width},${height} --window-position=0,0 --window-size=1,1`);
+args.push('--start-maximized');
+args.push('--disable-gpu');
+args.push('--disable-setuid-sandbox');
+args.push('--force-device-scale-factor');
+args.push('--ignore-certificate-errors');
+args.push('--no-sandbox');
 
 exports.start = async () => {
   let browser = await puppeteer.launch({
     headless: false,
     // slowMo: 80,
-    args: [`--window-size=${width},${height} --window-position=0,0 --window-size=1,1`]
+    args: args
   });
   return browser;
 };

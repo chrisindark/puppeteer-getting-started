@@ -11,7 +11,7 @@ exports.hasCardResult = async (page, deviceFlag) => {
 
 exports.goToGoogleJobsPage = async (page, deviceFlag) => {
   const resultSelector = '.PaEvOc.gws-horizon-textlists__li-ed';
-  let viaSelector = '.k8RiQ.nsol9b.hxSlV .k8RiQ';
+  let viaSelector = '';
 
   let resultSearchId = '';
   let titleSelector = '';
@@ -21,7 +21,8 @@ exports.goToGoogleJobsPage = async (page, deviceFlag) => {
     viaSelector = '.SHrHx .LqUjCc';
   } else {
     resultSearchId = '#search g-link a';
-    titleSelector = '.BjJfJf.gsrt.LqLjSc';
+    titleSelector = '.BjJfJf.cPd5d';
+    viaSelector = '.SHrHx .LqUjCc'
   }
 
   try {
