@@ -1,3 +1,4 @@
+const csvtojson = require('csvtojson');
 const Json2csvParser = require('json2csv').Parser;
 const fs = require('fs');
 const argv = require('yargs').argv;
@@ -62,4 +63,20 @@ const start = async () => {
 };
 
 console.log('started');
+
+const csvFilePath='./input.csv';
+const readCsv = async () => {
+  csvtojson({
+    noheader: true,
+  }).fromFile(csvFilePath)
+    .then((jsonObj) => {
+      // console.log(jsonObj);
+      jsonObj.forEach((value) => {
+        queryList.push(value.field1);
+      });
+      // console.log(queryList);
+    });
+};
+
+readCsv();
 start();

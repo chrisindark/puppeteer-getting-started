@@ -10,19 +10,19 @@ exports.hasCardResult = async (page, deviceFlag) => {
 };
 
 exports.goToGoogleJobsPage = async (page, deviceFlag) => {
-  const resultSelector = '.PaEvOc.gws-horizon-textlists__li-ed';
+  const resultSelector = '.iFjolb.gws-plugins-horizon-jobs__li-ed';
   let viaSelector = '';
 
   let resultSearchId = '';
   let titleSelector = '';
   if (deviceFlag) {
-    resultSearchId = '#rso .nA3Vyd.jmZnIe';
-    titleSelector = '.BjJfJf.cPd5d';
-    viaSelector = '.SHrHx .LqUjCc';
+    resultSearchId = '#rso .iI6nue.nA3Vyd.ndEm3b';
+    titleSelector = '.BjJfJf.PUpOsf.gsrt';
+    viaSelector = '.oNwCmf .Qk80Jf';
   } else {
     resultSearchId = '#search g-link a';
-    titleSelector = '.BjJfJf.cPd5d';
-    viaSelector = '.SHrHx .LqUjCc'
+    titleSelector = '.BjJfJf.PUpOsf.gsrt';
+    viaSelector = '.oNwCmf .Qk80Jf'
   }
 
   try {

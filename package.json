@@ -11,7 +11,6 @@
     "emulate": "node index.js --device='Nexus 5'",
     "buildJsonFromCsv": "npx babel ./src/others/csvToJson.js --out-file ./src/others/csvToJsonNode.js --presets=@babel/preset-env,@babel/preset-react",
     "getJsonFromCsv": "npm run buildJsonFromCsv && node ./src/others/csvToJsonNode.js"
-
   },
   "dependencies": {
     "csvtojson": "^2.0.10",
