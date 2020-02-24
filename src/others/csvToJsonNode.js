@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.writeJsonFile = exports.readCsvFile = void 0;
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var csvtojson = require('csvtojson');
 
 var fs = require('fs');
@@ -26,9 +24,9 @@ var readCsvFile = function readCsvFile() {
      * 	{a:"4", b:"5". c:"6"}
      * ]
      */
-    var configObj = [];
+    var configObj = {};
     jsonObj.forEach(function (value, index) {
-      var config = _defineProperty({}, "b".concat(index + 10), {
+      configObj["b".concat(index + 10)] = {
         "alwaysOn": true,
         "city": [firstCharUpperCase(value['City Name'])],
         "roles": ["all"],
@@ -41,9 +39,7 @@ var readCsvFile = function readCsvFile() {
         "formHeading": "Delivery Boys",
         "bannerType": "bannerForm",
         "redirectionUrl": value['Botlink']
-      });
-
-      configObj.push(config);
+      };
     });
     writeJsonFile(configObj);
   });

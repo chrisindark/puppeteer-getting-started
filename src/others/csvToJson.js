@@ -19,25 +19,22 @@ export const readCsvFile = () => {
        * ]
        */
 
-      var configObj = [];
+      var configObj = {};
       jsonObj.forEach((value, index) => {
-        const config = {
-          [`b${index + 10}`]: {
-            "alwaysOn": true,
-            "city": [firstCharUpperCase(value['City Name'])],
-            "roles": ["all"],
-            "title": "Become a Delivery Partner with Swiggy",
-            "description": "Earn up to Rs 30000 per month + 6 Lakhs Insurance benefits*",
-            "bannerSource": ["snb", "vap"],
-            "source": "PWA_PROMO",
-            "subSource": "Swiggy",
-            "imgSrc": "https://teja10.kuikr.com/images/jobs/swiggy.png",
-            "formHeading": "Delivery Boys",
-            "bannerType": "bannerForm",
-            "redirectionUrl": value['Botlink']
-          }
+        configObj[`b${index + 10}`] = {
+          "alwaysOn": true,
+          "city": [firstCharUpperCase(value['City Name'])],
+          "roles": ["all"],
+          "title": "Become a Delivery Partner with Swiggy",
+          "description": "Earn up to Rs 30000 per month + 6 Lakhs Insurance benefits*",
+          "bannerSource": ["snb", "vap"],
+          "source": "PWA_PROMO",
+          "subSource": "Swiggy",
+          "imgSrc": "https://teja10.kuikr.com/images/jobs/swiggy.png",
+          "formHeading": "Delivery Boys",
+          "bannerType": "bannerForm",
+          "redirectionUrl": value['Botlink']
         };
-        configObj.push(config);
       });
 
       writeJsonFile(configObj);
